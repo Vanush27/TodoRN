@@ -25,6 +25,12 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+$RNFirebaseAsStaticFramework = true
+pod 'Firebase', :modular_headers => true
+pod 'FirebaseCore', :modular_headers => true
+pod 'GoogleUtilities', :modular_headers => true
+
+
 target 'ToDoApp' do
   config = use_native_modules!
 
@@ -53,3 +59,4 @@ target 'ToDoApp' do
     )
   end
 end
+

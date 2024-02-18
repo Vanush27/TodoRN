@@ -1,3 +1,38 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"jsx": "react-native",
+		"lib": ["es2017", "ES2021.String"],
+		"moduleResolution": "node",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"strict": true,
+		"target": "esnext",
+		"baseUrl": ".",
+		"paths": {
+			"@redux/*": ["./src/redux/*"],
+			"@hooks/*": ["./src/hooks/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@screens": ["./src/screens"],
+			"@services/*": ["./src/services/*"],
+			"@navigators/*": ["./src/navigators/*"],
+			"@components/*": ["./src/components/*"],
+			"@components": ["./src/components"],
+			"@constants/*": ["./src/constants/*"],
+			"@types": ["./src/types"],
+			"@utils": ["./src/utils"],
+		}
+	},
+	"include": ["./src/**/*"],
+	"exclude": [
+		"node_modules",
+		"babel.config.js",
+		"metro.config.js",
+		"jest.config.js"
+	]
+
 }
