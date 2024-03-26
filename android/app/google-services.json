@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "253875982666",
+    "firebase_url": "https://testtask-d241e-default-rtdb.firebaseio.com",
+    "project_id": "testtask-d241e",
+    "storage_bucket": "testtask-d241e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253875982666:android:59583246600f0fda9471b3",
+        "android_client_info": {
+          "package_name": "com.todoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLKD9pvhikOcH52n3QYRhJfeFIt1ORHB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

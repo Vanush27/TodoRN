@@ -21,6 +21,7 @@ import {
   setIsEditedTodo,
   setTodoList,
 } from '@redux/todoNewSlice/todoNewSlice';
+import {TInputData} from 'src/types/todo';
 
 const TodoList = ({navigation}: any) => {
   const todoList = useAppSelector(state => state.todoNewReducer.todoNewList);
@@ -67,7 +68,7 @@ const TodoList = ({navigation}: any) => {
     await getTodoFetch();
   };
 
-  const handleDeleteItem = async (item: number) => {
+  const handleDeleteItem = async (item: any) => {
     const id = item?.uniqueId;
     setDeletePopupVisible(false);
     const response = await deleteTodoFromFirestore(id);

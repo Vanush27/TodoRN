@@ -36,7 +36,7 @@ export const updateTodoInFirestore = async (payload: any) => {
   }
 };
 
-export const addTaskToFirestore = async (inputData: TInputData) => {
+export const addTaskToFirestore = async (inputData: any) => {
   try {
     await axios.post(FIREBASE_PATH, {
       ...inputData,

@@ -39,7 +39,7 @@ const AddTodo = ({navigation, route}: any) => {
 
   const [inoutDescription, setInputDescription] = useState(
     isEditedTodo ? currentEditedTodo?.description : description,
-  ); // todo
+  );
 
   const [inputImportant, setInputImportant] = useState(
     isEditedTodo ? currentEditedTodo?.isImportant : isImportant,
@@ -78,15 +78,11 @@ const AddTodo = ({navigation, route}: any) => {
         isCompleted: false,
         date: new Date(),
       };
+
       await addTaskToFirestore(payload);
     }
     await getTodoFetch();
     if (inputTitle && inoutDescription) {
-      // dispatchAddTodo(newTask);
-
-      // dispatchSetTitle('');
-      // dispatchSetDescription('');
-      // dispatchIsImportant(false);
       setInputTitle(null);
       setInputImportant(null);
       setInputDescription(null);
@@ -95,14 +91,6 @@ const AddTodo = ({navigation, route}: any) => {
       navigation.goBack();
     }
   };
-
-  // useEffect(() => {
-  //   return () => {
-  //     setInputTitle(null);
-  //     setInputImportant(null);
-  //     setInputDescription(null);
-  //   };
-  // }, []);
 
   return (
     <View style={styles.container}>
